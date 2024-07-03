@@ -1,7 +1,8 @@
 import ArchivePageHeader from "@/components/archive-page-header"
 import { BlogCard } from "@/components/shared/blog-card"
+import { ProjectCard } from "@/components/shared/project.card"
 import PaginationComponent from "@/components/ui/pagination-com"
-import { IBlog } from "@/interface"
+import { IBlog, IProject } from "@/interface"
 import { axiosIstance } from "@/lib/axios"
 
 const BlogsPage = async ({
@@ -9,7 +10,7 @@ const BlogsPage = async ({
 }: {
   searchParams: Record<string, string>
 }) => {
-  const blogs = await axiosIstance("/blogs")
+  const projects = await axiosIstance("/projects")
   const query = Object.keys(searchParams)
     .map(key => {
       if (searchParams[key] !== undefined) {
@@ -19,18 +20,19 @@ const BlogsPage = async ({
     .join("&")
 
   const totalPage = Math.ceil(
-    blogs?.data?.meta?.total / blogs?.data?.meta?.limit
+    projects?.data?.meta?.total / projects?.data?.meta?.limit
   )
 
   return (
     <div className="section space-y-12">
-      <ArchivePageHeader title="Blogs" />
+      <ArchivePageHeader title="Latest Projects" />
       <div className="container space-y-8">
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {blogs.data?.data?.map((blog: IBlog) => (
-            <BlogCard
-              key={blog.id}
-              blog={blog}
+        <div className="grid gap-4">
+          {projects.data?.data?.map((project: IProject, idx: number) => (
+            <ProjectCard
+              key={project.id}
+              project={project}
+              idx={idx}
             />
           ))}
         </div>
