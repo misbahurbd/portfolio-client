@@ -1,8 +1,7 @@
-import ArchivePageHeader from "@/components/archive-page-header"
-import { BlogCard } from "@/components/shared/blog-card"
+import PageHeader from "@/components/archive-page-header"
 import { ProjectCard } from "@/components/shared/project.card"
 import PaginationComponent from "@/components/ui/pagination-com"
-import { IBlog, IProject } from "@/interface"
+import { IProject } from "@/interface"
 import { axiosIstance } from "@/lib/axios"
 
 const BlogsPage = async ({
@@ -25,7 +24,7 @@ const BlogsPage = async ({
 
   return (
     <div className="section space-y-12">
-      <ArchivePageHeader title="Latest Projects" />
+      <PageHeader title="Latest Projects" />
       <div className="container space-y-8">
         <div className="grid gap-4">
           {projects.data?.data?.map((project: IProject, idx: number) => (

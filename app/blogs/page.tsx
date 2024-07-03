@@ -1,4 +1,4 @@
-import ArchivePageHeader from "@/components/archive-page-header"
+import PageHeader from "@/components/archive-page-header"
 import { BlogCard } from "@/components/shared/blog-card"
 import PaginationComponent from "@/components/ui/pagination-com"
 import { IBlog } from "@/interface"
@@ -23,8 +23,8 @@ const BlogsPage = async ({
   )
 
   return (
-    <div className="section space-y-12">
-      <ArchivePageHeader title="Blogs" />
+    <div className="space-y-12">
+      <PageHeader title="Blogs" />
       <div className="container space-y-8">
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {blogs.data?.data?.map((blog: IBlog) => (

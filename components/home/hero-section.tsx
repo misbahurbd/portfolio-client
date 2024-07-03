@@ -1,14 +1,9 @@
 "use client"
 
-import {
-  motion,
-  useInView,
-  useMotionValueEvent,
-  useScroll,
-} from "framer-motion"
+import { motion, useInView } from "framer-motion"
 import { Button } from "../ui/button"
 import Link from "next/link"
-import { useEffect, useRef, useState } from "react"
+import { useRef } from "react"
 import Image from "next/image"
 import {
   fadeUpVariants,
@@ -57,7 +52,7 @@ export const HeroSection = () => {
               >
                 Hello! I&apos;m
               </motion.p>
-              <h1 className="text-6xl lg:text-8xl xl:text-9xl lg:-ml-1.5 font-extrabold uppercase">
+              <h1 className="text-5xl lg:text-8xl xl:text-9xl lg:-ml-1.5 font-extrabold uppercase">
                 <span className="overflow-hidden block">
                   <motion.span
                     custom={2}

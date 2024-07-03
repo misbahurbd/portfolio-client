@@ -38,8 +38,6 @@ export const ExperienceEducationSection = () => {
     fetchData("/experiences", setExperiences)
   }, [])
 
-  console.log({ educations }, { experiences })
-
   return (
     <section className="section relative">
       <div className="absolute w-full top-20">
@@ -70,22 +68,22 @@ export const ExperienceEducationSection = () => {
                   initial="hidden"
                   whileInView="show"
                   viewport={{ once: true, amount: 0.3 }}
-                  className="bg-secondary bg-dot-black/[0.1] dark:bg-dot-white/[0.1] px-6 py-5 rounded-md"
+                  className="bg-secondary bg-dot-black/[0.1] dark:bg-dot-white/[0.1] p-6 md:p-8 rounded-md"
                   key={`edu-${edu.id}`}
                 >
-                  <div className="flex gap-3 items-center">
+                  <div className="flex gap-3 items-start flex-col-reverse">
                     <h3 className="text-foreground flex-1 text-lg">
                       <span className="font-bold">{edu.degree}</span>
                       <span className="px-1">-</span>
                       <span>{edu.fieldOfStudy}</span>
                     </h3>
-                    <p className="shrink-0 text-sm bg-primary px-2 py-1.5 rounded text-primary-foreground">
+                    <p className="shrink-0 text-xs bg-primary px-1.5 py-1 rounded text-primary-foreground">
                       {format(new Date(edu.startDate), "yyyy")} -{" "}
                       {format(new Date(edu.endDate), "yyyy")}
                     </p>
                   </div>
 
-                  <p className="text-muted-foreground text-xs">
+                  <p className="text-muted-foreground text-xs mt-2">
                     {edu.school}, {edu.location}
                   </p>
                   <span className="w-full block h-px bg-border my-4" />
@@ -113,22 +111,21 @@ export const ExperienceEducationSection = () => {
                   initial="hidden"
                   whileInView="show"
                   viewport={{ once: true, amount: 0.3 }}
-                  className="bg-secondary bg-dot-black/[0.1] dark:bg-dot-white/[0.1] px-6 py-5 rounded-md"
+                  className="bg-secondary bg-dot-black/[0.1] dark:bg-dot-white/[0.1] p-6 md:p-8 rounded-md"
                   key={`edu-${exp.id}`}
                 >
-                  <div className="flex gap-3 items-center">
+                  <div className="flex gap-3 items-start flex-col-reverse">
                     <h3 className="text-foreground flex-1 text-lg">
                       <span className="font-bold">{exp.title}</span>
                       <span className="px-1">-</span>
                       <span>{exp.company}</span>
                     </h3>
-                    <p className="shrink-0 text-sm bg-primary px-2 py-1.5 rounded text-primary-foreground">
+                    <p className="shrink-0 text-xs bg-primary px-1.5 py-1 rounded text-primary-foreground">
                       {format(new Date(exp.startDate), "yyyy")}-
                       {format(new Date(exp.endDate), "yyyy")}
                     </p>
                   </div>
-
-                  <p className="text-muted-foreground text-xs">
+                  <p className="text-muted-foreground text-xs mt-2">
                     {exp.location}
                   </p>
                   <span className="w-full block h-px bg-border my-4" />

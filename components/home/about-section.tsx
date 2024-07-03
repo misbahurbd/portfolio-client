@@ -29,8 +29,6 @@ export const AboutSection = () => {
   })
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.2])
 
-  useMotionValueEvent(scrollYProgress, "change", x => console.log(x))
-
   return (
     <section
       id="about"
@@ -62,15 +60,17 @@ export const AboutSection = () => {
                 variants={zoomInVariants}
                 initial="hidden"
                 animate={inView ? "show" : "hidden"}
-                className="block overflow-hidden rounded-xl"
+                className="block overflow-hidden rounded-xl w-full"
               >
-                <motion.div style={{ scale, transformOrigin: "center 40px" }}>
+                <motion.div
+                  style={{ scale, transformOrigin: "center 40px" }}
+                  className="w-[80vw] max-w-[400px] aspect-square lg:aspect-[14/16] rounded-xl"
+                >
                   <Image
                     src="/assets/img/misbahur-rahman-about.jpeg"
-                    width={400}
-                    height={560}
+                    fill
                     alt="Misbahur Rahman About"
-                    className="aspect-square lg:aspect-[14/16] scale-x-100 object-cover rounded-xl max-w-full"
+                    className="object-cover"
                     priority
                   />
                 </motion.div>

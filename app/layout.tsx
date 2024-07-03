@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils"
 import Header from "@/components/header"
 import ContacFormModalProvider from "@/providers/contact-form-modal-provider"
 import { ThemeProvider } from "@/providers/theme-provider"
+import Footer from "@/components/home/footer"
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -38,6 +39,7 @@ export default function RootLayout({
           <ContacFormModalProvider />
           <Header />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

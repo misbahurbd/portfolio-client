@@ -60,3 +60,12 @@
     @apply py-16 md:py-24 space-y-6;
   }
 }
+.bn-editor {
+  @apply !bg-transparent !p-0 !leading-relaxed;
+}
+.bn-editor p {
+  @apply !mb-1;
+}
+.bn-editor a {
+  @apply underline transition hover:text-primary;
+}

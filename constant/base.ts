@@ -35,13 +35,15 @@ export const socialLinks = [
   },
 ]
 
-export const skills: {
+export interface ISkill {
   id: number
   label: string
   value: string
   icon: IconType
   color: string
-}[] = [
+}
+
+export const skills: ISkill[] = [
   {
     id: 1,
     label: "HTML 5",

@@ -17,14 +17,19 @@ export const BlogCard = ({ blog, idx = 0 }: { blog: IBlog; idx?: number }) => {
       viewport={{ once: true, amount: 0.5 }}
       className="bg-background transition-all p-4 border border-border rounded-xl space-y-4 shadow-none hover:shadow-md shadow-border"
     >
-      <div className="aspect-[5/3] relative">
-        <Image
-          fill
-          src={blog.featurePhoto}
-          alt={blog.title}
-          className="rounded-lg object-cover"
-        />
-      </div>
+      <Link
+        href={`/blogs/${blog.slug}`}
+        className="block rounded-lg relative group/blog-img"
+      >
+        <div className="aspect-[5/3] relative">
+          <Image
+            fill
+            src={blog.featurePhoto}
+            alt={blog.title}
+            className="rounded-lg transition duration-500 object-cover group-hover/blog-img:scale-105"
+          />
+        </div>
+      </Link>
       <div className="space-y-3">
         <Link href={`/blogs/${blog.slug}`}>
           <h3 className="font-bold transition hover:text-primary">

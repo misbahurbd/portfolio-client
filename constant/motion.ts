@@ -221,3 +221,27 @@ export const zoomInChildVariants: Variants = {
     },
   },
 }
+
+export const fadeInVariants: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 30,
+  },
+  show: (i = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: animationDuration,
+      delay: i * delayTime,
+      ...springEffect,
+    },
+  }),
+  out: {
+    opacity: 0,
+    y: 30,
+    transition: {
+      duration: animationDuration,
+      ...springEffect,
+    },
+  },
+}
