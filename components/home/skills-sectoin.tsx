@@ -31,11 +31,11 @@ export const SkillsSection = () => {
               style={{
                 background: `${skill.color}`,
               }}
-              className="flex items-center gap-2 px-3 py-2 text-white skill-card"
+              className="flex items-center gap-2 px-3 py-2 text-white"
               key={skill.label}
             >
               <skill.icon className="size-5 md:size-6" />
-              <span className="font-bold text-base md:first:text-lg">
+              <span className="font-medium md:font-bold text-sm sm:text-base md:first:text-lg">
                 {skill.label}
               </span>
             </motion.div>

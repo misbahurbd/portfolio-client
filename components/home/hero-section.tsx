@@ -102,8 +102,9 @@ export const HeroSection = () => {
                 >
                   <Button asChild>
                     <Link
-                      download
+                      download="misbahur-rahman-resume"
                       href="/assets/file/misbahur-rahman-resume.pdf"
+                      target="_blank"
                     >
                       <span className="mr-2">Resume</span>
                       <LuDownload />

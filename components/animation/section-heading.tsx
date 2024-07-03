@@ -22,12 +22,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
   className,
 }) => {
   return (
-    <div
-      className={cn(
-        "max-w-sm sm:max-w-md lg:max-w-xl 2xl:max-w-2xl space-y-2 mb-5",
-        className
-      )}
-    >
+    <div className={cn("max-w-xl md:max-w-3xl space-y-2 mb-5", className)}>
       <motion.h4 className="capitalize w-full overflow-hidden text-muted-foreground">
         <motion.span
           variants={slideRightVariants}

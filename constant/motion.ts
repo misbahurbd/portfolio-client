@@ -90,6 +90,27 @@ export const fadeUpVariants: Variants = {
     },
   }),
 }
+
+export const fadeScaleUpVariants: Variants = {
+  hidden: {
+    y: 60,
+    opacity: 0,
+    scale: 0.8,
+  },
+  show: (i = 0) => ({
+    y: 0,
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: animationDuration,
+      delay: i * delayTime,
+      delayChildren: i * delayTime,
+      staggerChildren: delayTime,
+      ...springEffect,
+    },
+  }),
+}
+
 export const fadeUpChildVariants: Variants = {
   hidden: {
     y: 60,

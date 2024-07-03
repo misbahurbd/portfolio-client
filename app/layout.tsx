@@ -2,6 +2,8 @@ import type { Metadata } from "next"
 import { Plus_Jakarta_Sans } from "next/font/google"
 import "./globals.css"
 import { cn } from "@/lib/utils"
+import Header from "@/components/header"
+import ContacFormModalProvider from "@/providers/contact-form-modal-provider"
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -25,7 +27,11 @@ export default function RootLayout({
       suppressHydrationWarning={true}
       lang="en"
     >
-      <body>{children}</body>
+      <body>
+        <ContacFormModalProvider />
+        <Header />
+        {children}
+      </body>
     </html>
   )
 }

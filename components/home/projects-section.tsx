@@ -12,7 +12,11 @@ import Link from "next/link"
 import { ArrowTopRightIcon } from "@radix-ui/react-icons"
 import { cn } from "@/lib/utils"
 import { motion } from "framer-motion"
-import { textUpVariants, zoomInVariants } from "@/constant/motion"
+import {
+  fadeScaleUpVariants,
+  textUpVariants,
+  zoomInVariants,
+} from "@/constant/motion"
 
 export const ProjectsSection = () => {
   const [projects, setProjects] = useState([])
@@ -33,10 +37,8 @@ export const ProjectsSection = () => {
     fetchData()
   }, [])
 
-  console.log({ projects })
-
   return (
-    <section className="section bg-dot-black/[0.1] dark:bg-dot-white/[0.1] isolate relative bg-secondary">
+    <section className="section bg-dot-black/[0.1] dark:bg-dot-white/[0.1] isolate relative bg-secondary overflow-hidden">
       <div className="absolute w-full top-20">
         <ParallaxText baseVelocity={-1.5}>Latest Projects</ParallaxText>
       </div>
@@ -46,30 +48,16 @@ export const ProjectsSection = () => {
             className="text-center mx-auto"
             subtitle="Selected Work"
             title="Bringing Ideas To Life"
-            desc="Embark on a visual journey through a carefully curated selection of my recent projects. Each one is a unique blend of creativity and technical finesse, designed to make your ideas come to life."
+            desc="Explore a curated selection of my recent projects, each blending creativity and technical finesse to bring your ideas to life."
           />
         </div>
-        <div className="space-y-4 overflow-hidden">
+        <div className="space-y-4">
           {projects.length > 0 &&
             projects.map((project: IProject, idx) => (
               <motion.div
-                initial={{
-                  opacity: 0,
-                  y: 30,
-                  scale: 0.8,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                  scale: 1,
-                }}
-                transition={{
-                  duration: 0.3,
-                  type: "spring",
-                  stiffness: 150,
-                  mass: 0.1,
-                  damping: 1.5,
-                }}
+                variants={fadeScaleUpVariants}
+                initial="hidden"
+                whileInView="show"
                 viewport={{ once: true, amount: 0.3 }}
                 key={project.id}
                 className={cn(
@@ -80,7 +68,7 @@ export const ProjectsSection = () => {
                 <div className="md:w-1/2 lg:w-2/5 px-4 pt-4 bg-primary/10 overflow-hidden aspect-video">
                   <div
                     className={cn(
-                      "h-full transition relative rounded-t-xl overflow-hidden scale-125 group-hover/project:scale-100",
+                      "h-full transition duration-500 relative rounded-t-xl overflow-hidden scale-125 group-hover/project:scale-100",
                       idx % 2 == 0 ? "origin-top-right" : "origin-top-left"
                     )}
                   >

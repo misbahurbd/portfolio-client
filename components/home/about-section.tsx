@@ -16,8 +16,11 @@ import { Button } from "@/components/ui/button"
 import { ArrowTopRightIcon } from "@radix-ui/react-icons"
 import { LuDownload } from "react-icons/lu"
 import { ParallaxText } from "../animation/perallax-text"
+import { useContactFormModal } from "@/hooks/use-contact-form-hook"
+import Link from "next/link"
 
 export const AboutSection = () => {
+  const { onOpen } = useContactFormModal()
   const imgRef = useRef(null)
   const inView = useInView(imgRef, { once: true, amount: 0.5 })
   const { scrollYProgress } = useScroll({
@@ -110,16 +113,25 @@ export const AboutSection = () => {
               viewport={{ once: true, amount: 0.4 }}
               className="flex items-center justify-center lg:justify-start gap-2"
             >
-              <Button className="group flex items-center gap-2">
+              <Button
+                className="group flex items-center gap-2"
+                onClick={onOpen}
+              >
                 <span>Let&apos;s Contact</span>
                 <ArrowTopRightIcon className="w-5 h-5 transition group-hover:rotate-45" />
               </Button>
               <Button
                 className="group flex items-center gap-2"
                 variant="social"
+                asChild
               >
-                <span>Resume</span>
-                <LuDownload />
+                <Link
+                  download="misbahur-rahman-resume"
+                  href="/assets/file/misbahur-rahman-resume.pdf"
+                >
+                  <span>Resume</span>
+                  <LuDownload />
+                </Link>
               </Button>
             </motion.div>
           </div>
