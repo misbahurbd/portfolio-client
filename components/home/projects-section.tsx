@@ -12,11 +12,7 @@ import Link from "next/link"
 import { ArrowTopRightIcon } from "@radix-ui/react-icons"
 import { cn } from "@/lib/utils"
 import { motion } from "framer-motion"
-import {
-  fadeScaleUpVariants,
-  textUpVariants,
-  zoomInVariants,
-} from "@/constant/motion"
+import { fadeScaleUpVariants } from "@/constant/motion"
 
 export const ProjectsSection = () => {
   const [projects, setProjects] = useState([])
@@ -38,7 +34,10 @@ export const ProjectsSection = () => {
   }, [])
 
   return (
-    <section className="section bg-dot-black/[0.1] dark:bg-dot-white/[0.1] isolate relative bg-secondary overflow-hidden">
+    <section
+      id="projects"
+      className="section bg-dot-black/[0.1] dark:bg-dot-white/[0.1] isolate relative bg-secondary overflow-hidden"
+    >
       <div className="absolute w-full top-20">
         <ParallaxText baseVelocity={-1.5}>Latest Projects</ParallaxText>
       </div>

@@ -70,7 +70,7 @@ export const ExperienceEducationSection = () => {
                   initial="hidden"
                   whileInView="show"
                   viewport={{ once: true, amount: 0.3 }}
-                  className="bg-primary/5 bg-dot-black/[0.1] dark:bg-dot-white/[0.1] px-6 py-5 rounded-md"
+                  className="bg-secondary bg-dot-black/[0.1] dark:bg-dot-white/[0.1] px-6 py-5 rounded-md"
                   key={`edu-${edu.id}`}
                 >
                   <div className="flex gap-3 items-center">
@@ -113,7 +113,7 @@ export const ExperienceEducationSection = () => {
                   initial="hidden"
                   whileInView="show"
                   viewport={{ once: true, amount: 0.3 }}
-                  className="bg-primary/5 bg-dot-black/[0.1] dark:bg-dot-white/[0.1] px-6 py-5 rounded-md"
+                  className="bg-secondary bg-dot-black/[0.1] dark:bg-dot-white/[0.1] px-6 py-5 rounded-md"
                   key={`edu-${exp.id}`}
                 >
                   <div className="flex gap-3 items-center">

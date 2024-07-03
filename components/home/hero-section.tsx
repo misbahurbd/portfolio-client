@@ -25,6 +25,7 @@ export const HeroSection = () => {
 
   return (
     <section
+      id="hero"
       ref={heroSec}
       className="w-full bg:background dark:bg-grid-white/[0.08] bg-grid-black/[0.05] relative flex items-center justify-center"
     >

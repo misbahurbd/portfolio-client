@@ -121,6 +121,7 @@ export const fadeUpChildVariants: Variants = {
     opacity: 1,
     transition: {
       duration: animationDuration,
+      delay: i * delayTime,
       ...springEffect,
     },
   }),

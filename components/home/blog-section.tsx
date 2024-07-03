@@ -31,7 +31,10 @@ export const BlogSection = () => {
   }, [])
 
   return (
-    <section className="section bg-dot-black/[0.1] dark:bg-dot-white/[0.1] isolate relative bg-secondary overflow-hidden">
+    <section
+      id="blogs"
+      className="section bg-dot-black/[0.1] dark:bg-dot-white/[0.1] isolate relative bg-secondary overflow-hidden"
+    >
       <div className="absolute w-full top-20">
         <ParallaxText baseVelocity={-1.5}>INSIGHTS & UPDATES</ParallaxText>
       </div>

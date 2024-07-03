@@ -4,6 +4,7 @@ import "./globals.css"
 import { cn } from "@/lib/utils"
 import Header from "@/components/header"
 import ContacFormModalProvider from "@/providers/contact-form-modal-provider"
+import { ThemeProvider } from "@/providers/theme-provider"
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -24,13 +25,20 @@ export default function RootLayout({
   return (
     <html
       className={cn(plusJakartaSans.className, "scroll-smooth")}
-      suppressHydrationWarning={true}
+      suppressHydrationWarning
       lang="en"
     >
       <body>
-        <ContacFormModalProvider />
-        <Header />
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <ContacFormModalProvider />
+          <Header />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )

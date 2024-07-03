@@ -32,7 +32,10 @@ export const AboutSection = () => {
   useMotionValueEvent(scrollYProgress, "change", x => console.log(x))
 
   return (
-    <section className="section bg-secondary relative isolate">
+    <section
+      id="about"
+      className="section bg-secondary relative isolate"
+    >
       <div className="absolute top-20 w-full left-0 right-0">
         <ParallaxText baseVelocity={-1}>Misbahur Rahman</ParallaxText>
       </div>

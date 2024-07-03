@@ -9,7 +9,10 @@ import { zoomInVariants } from "@/constant/motion"
 
 export const SkillsSection = () => {
   return (
-    <section className="section relative">
+    <section
+      id="skills"
+      className="section relative"
+    >
       <div className="absolute w-full top-20">
         <ParallaxText>Technology</ParallaxText>
       </div>

@@ -8,10 +8,12 @@ const ContactFormModal = () => {
 
   return (
     <Modal
+      title="Let's Work Toghter"
+      description=""
       isOpen={isOpen}
       onClose={onClose}
     >
-      <h2>Hi</h2>
+      <div className="grid border-separate border-border border grid-cols-2"></div>
     </Modal>
   )
 }
