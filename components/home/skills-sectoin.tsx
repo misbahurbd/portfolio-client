@@ -29,7 +29,7 @@ export const SkillsSection = () => {
               initial="hidden"
               variants={zoomInVariants}
               whileInView="show"
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true }}
               custom={2 + idx}
               style={{
                 background: `${skill.color}`,

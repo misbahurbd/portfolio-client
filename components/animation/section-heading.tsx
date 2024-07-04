@@ -38,7 +38,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
         variants={textUpVariants}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true }}
         custom={1}
         className="text-2xl sm:text-3xl lg:text-[2rem] lg:leading-tight 2xl:text-[2.5rem] 2xl:leading-tight font-black overflow-hidden"
       >
@@ -60,7 +60,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
           variants={textUpVariants}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true }}
           className="text-muted-foreground"
         >
           {desc}

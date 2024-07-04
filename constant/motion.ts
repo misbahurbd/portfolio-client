@@ -19,7 +19,7 @@ export const slideRightVariants: Variants = {
     opacity: 1,
     transition: {
       duration: animationDuration,
-      delay: i * delayTime,
+      delay: 0.1 + i * delayTime,
       ...springEffect,
     },
   }),
@@ -34,7 +34,7 @@ export const slideLeftVariants: Variants = {
     opacity: 1,
     transition: {
       duration: animationDuration,
-      delay: i * delayTime,
+      delay: 0.1 + i * delayTime,
       ...springEffect,
     },
   }),
@@ -50,7 +50,7 @@ export const textUpVariants: Variants = {
     opacity: 1,
     transition: {
       duration: animationDuration,
-      delay: i * delayTime,
+      delay: 0.1 + i * delayTime,
       delayChildren: i * delayTime,
       staggerChildren: delayTime,
       ...springEffect,
@@ -83,7 +83,7 @@ export const fadeUpVariants: Variants = {
     opacity: 1,
     transition: {
       duration: animationDuration,
-      delay: i * delayTime,
+      delay: 0.1 + i * delayTime,
       delayChildren: i * delayTime,
       staggerChildren: delayTime,
       ...springEffect,
@@ -103,7 +103,7 @@ export const fadeScaleUpVariants: Variants = {
     scale: 1,
     transition: {
       duration: animationDuration,
-      delay: i * delayTime,
+      delay: 0.1 + i * delayTime,
       delayChildren: i * delayTime,
       staggerChildren: delayTime,
       ...springEffect,
@@ -121,7 +121,7 @@ export const fadeUpChildVariants: Variants = {
     opacity: 1,
     transition: {
       duration: animationDuration,
-      delay: i * delayTime,
+      delay: 0.1 + i * delayTime,
       ...springEffect,
     },
   }),
@@ -137,7 +137,7 @@ export const fadeDownVariants: Variants = {
     opacity: 1,
     transition: {
       duration: animationDuration,
-      delay: i * delayTime,
+      delay: 0.1 + i * delayTime,
       ...springEffect,
     },
   }),
@@ -152,7 +152,7 @@ export const fadeLeftVariants: Variants = {
     opacity: 1,
     transition: {
       duration: animationDuration,
-      delay: i * delayTime,
+      delay: 0.1 + i * delayTime,
       delayChildren: i * delayTime,
       staggerChildren: delayTime,
       ...springEffect,
@@ -184,7 +184,7 @@ export const fadeRightVariants: Variants = {
     opacity: 1,
     transition: {
       duration: animationDuration,
-      delay: i * delayTime,
+      delay: 0.1 + i * delayTime,
       ...springEffect,
     },
   }),
@@ -200,7 +200,7 @@ export const zoomInVariants: Variants = {
     opacity: 1,
     transition: {
       duration: animationDuration,
-      delay: i * delayTime,
+      delay: 0.1 + i * delayTime,
       delayChildren: i * delayTime,
       staggerChildren: delayTime,
       ...springEffect,
@@ -232,7 +232,7 @@ export const fadeInVariants: Variants = {
     y: 0,
     transition: {
       duration: animationDuration,
-      delay: i * delayTime,
+      delay: 0.1 + i * delayTime,
       ...springEffect,
     },
   }),

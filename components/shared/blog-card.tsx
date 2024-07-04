@@ -14,7 +14,7 @@ export const BlogCard = ({ blog, idx = 0 }: { blog: IBlog; idx?: number }) => {
       initial="hidden"
       whileInView="show"
       custom={idx}
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: true }}
       className="bg-background transition-all p-4 border border-border rounded-xl space-y-4 shadow-none hover:shadow-md shadow-border"
     >
       <Link

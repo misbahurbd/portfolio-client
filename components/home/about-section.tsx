@@ -88,7 +88,7 @@ export const AboutSection = () => {
               initial="hidden"
               custom={3}
               whileInView="show"
-              viewport={{ once: true, amount: 0.4 }}
+              viewport={{ once: true }}
               className="text-muted-foreground"
             >
               Welcome to my digital playground! I&apos;m not just a web
@@ -100,7 +100,7 @@ export const AboutSection = () => {
               initial="hidden"
               custom={4}
               whileInView="show"
-              viewport={{ once: true, amount: 0.4 }}
+              viewport={{ once: true }}
               className="text-muted-foreground"
             >
               As a Full Stack Developer, I craft beautiful user interfaces and
@@ -113,7 +113,7 @@ export const AboutSection = () => {
               initial="hidden"
               custom={5}
               whileInView="show"
-              viewport={{ once: true, amount: 0.4 }}
+              viewport={{ once: true }}
               className="flex items-center justify-center lg:justify-start gap-2"
             >
               <Button

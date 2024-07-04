@@ -85,7 +85,7 @@ const Header = () => {
                   variants={zoomInVariants}
                   initial="hidden"
                   whileInView="show"
-                  viewport={{ once: true, amount: 0.3 }}
+                  viewport={{ once: true }}
                   key={nav.path + "des"}
                   custom={idx}
                 >

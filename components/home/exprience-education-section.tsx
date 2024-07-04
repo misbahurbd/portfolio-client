@@ -56,7 +56,7 @@ export const ExperienceEducationSection = () => {
               variants={slideRightVariants}
               initial="hidden"
               whileInView="show"
-              viewport={{ once: true, amount: "some" }}
+              viewport={{ once: true }}
               className="font-black text-xl w-max"
             >
               Educations
@@ -67,7 +67,7 @@ export const ExperienceEducationSection = () => {
                   variants={fadeScaleUpVariants}
                   initial="hidden"
                   whileInView="show"
-                  viewport={{ once: true, amount: 0.3 }}
+                  viewport={{ once: true }}
                   className="bg-secondary bg-dot-black/[0.1] dark:bg-dot-white/[0.1] p-6 md:p-8 rounded-md"
                   key={`edu-${edu.id}`}
                 >
@@ -99,7 +99,7 @@ export const ExperienceEducationSection = () => {
               variants={slideRightVariants}
               initial="hidden"
               whileInView="show"
-              viewport={{ once: true, amount: "some" }}
+              viewport={{ once: true }}
               className="font-black text-xl w-max"
             >
               Experiences
@@ -110,7 +110,7 @@ export const ExperienceEducationSection = () => {
                   variants={fadeScaleUpVariants}
                   initial="hidden"
                   whileInView="show"
-                  viewport={{ once: true, amount: 0.3 }}
+                  viewport={{ once: true }}
                   className="bg-secondary bg-dot-black/[0.1] dark:bg-dot-white/[0.1] p-6 md:p-8 rounded-md"
                   key={`edu-${exp.id}`}
                 >

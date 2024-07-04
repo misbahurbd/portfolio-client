@@ -22,7 +22,7 @@ export const ProjectCard = ({
       variants={fadeScaleUpVariants}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true }}
       className={cn(
         "flex flex-col bg-background transition group/project hover:shadow-xl hover:shadow-foreground/5 rounded-lg overflow-hidden",
         idx % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
