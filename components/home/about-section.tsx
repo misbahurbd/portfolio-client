@@ -1,39 +1,36 @@
-"use client"
+"use client";
 
-import BgLine from "@/components/animation/bg-line"
-import Image from "next/image"
-import { SectionHeading } from "@/components/animation/section-heading"
+import BgLine from "@/components/animation/bg-line";
+import Image from "next/image";
+import { SectionHeading } from "@/components/animation/section-heading";
 import {
   motion,
   useInView,
   useMotionValueEvent,
   useScroll,
   useTransform,
-} from "framer-motion"
-import { useRef } from "react"
-import { textUpVariants, zoomInVariants } from "@/constant/motion"
-import { Button } from "@/components/ui/button"
-import { ArrowTopRightIcon } from "@radix-ui/react-icons"
-import { LuDownload } from "react-icons/lu"
-import { ParallaxText } from "../animation/perallax-text"
-import { useContactFormModal } from "@/hooks/use-contact-form-hook"
-import Link from "next/link"
+} from "framer-motion";
+import { useRef } from "react";
+import { textUpVariants, zoomInVariants } from "@/constant/motion";
+import { Button } from "@/components/ui/button";
+import { ArrowTopRightIcon } from "@radix-ui/react-icons";
+import { LuDownload } from "react-icons/lu";
+import { ParallaxText } from "../animation/perallax-text";
+import { useContactFormModal } from "@/hooks/use-contact-form-hook";
+import Link from "next/link";
 
 export const AboutSection = () => {
-  const { onOpen } = useContactFormModal()
-  const imgRef = useRef(null)
-  const inView = useInView(imgRef, { once: true, amount: 0.5 })
+  const { onOpen } = useContactFormModal();
+  const imgRef = useRef(null);
+  const inView = useInView(imgRef, { once: true, amount: 0.5 });
   const { scrollYProgress } = useScroll({
     target: imgRef,
     offset: ["start end", "end start"],
-  })
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.2])
+  });
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
 
   return (
-    <section
-      id="about"
-      className="section bg-secondary relative isolate"
-    >
+    <section id="about" className="section bg-secondary relative isolate">
       <div className="absolute top-20 w-full left-0 right-0">
         <ParallaxText baseVelocity={-1}>Misbahur Rahman</ParallaxText>
       </div>
@@ -129,8 +126,9 @@ export const AboutSection = () => {
                 asChild
               >
                 <Link
-                  download="misbahur-rahman-resume"
-                  href="/assets/file/misbahur-rahman-resume.pdf"
+                  download="Misbahur_Rahman_Full_Stack_Developer"
+                  href="/assets/file/Misbahur_Rahman_Full_Stack_Developer.pdf"
+                  target="_blank"
                 >
                   <span>Resume</span>
                   <LuDownload />
@@ -142,5 +140,5 @@ export const AboutSection = () => {
       </div>
       <BgLine />
     </section>
-  )
-}
+  );
+};
