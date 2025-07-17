@@ -99,7 +99,7 @@ export const HeroSection = () => {
                   <Button asChild>
                     <Link
                       download="misbahur-rahman-resume"
-                      href="/assets/file/misbahur-rahman-resume.pdf"
+                      href="/assets/file/Misbahur_Rahman_Full_Stack_Developer.pdf"
                       target="_blank"
                     >
                       <span className="mr-2">Resume</span>
